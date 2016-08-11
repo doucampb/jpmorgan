@@ -116,7 +116,7 @@ public class StockTest {
 
         // Should be cube root of (300*200*100) =  cube root of (6000000) 181.71??
 
-        //Test started but code not complete!!!
+        assertEquals(181.7120592832139, StockUtils.calculateGeometricMean(stockList), 0);
 
 
 

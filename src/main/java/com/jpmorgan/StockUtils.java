@@ -9,13 +9,22 @@ public class StockUtils {
 
     public static double calculateGeometricMean(List<Stock> stocks) {
 
+        double sum = 1;
+
         if (stocks.isEmpty()) {
             return -1;
         }
 
-        // Still to be implemented
+        int counter = 0;
+        for (Stock stock : stocks) {
+            for (int i = 0; i < stock.getTradesList().size(); i++) {
+                sum *= stock.getTradesList().get(i).getTradePrice();
+                counter++;
+            }
+        }
 
-        return 0.0;
+        return Math.pow(sum, (double) 1 / counter);
+
     }
 
 }
